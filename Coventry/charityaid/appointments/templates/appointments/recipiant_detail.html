@@ -1,0 +1,6 @@
+<h1>Recipiant Detail</h1>
+<p><strong>First Name:</strong> {{ recipiant.fname}}</p>
+<p><strong>Last Name:</strong> {{ recipiant.lname}}</p> <p><strong>Telephone:</strong> {{ recipiant.telephone }}</p>
+<a href="{% url 'recipiant_edit' recipiant.id%}">Edit</a>
+<a href="{% url 'recipiant_delete' recipiant.id %}">Delete</a> <br><br>
+<a href="{% url 'recipiant_list' %}">Back to List</a>

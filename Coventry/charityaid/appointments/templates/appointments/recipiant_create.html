@@ -1,0 +1,7 @@
+<h1> Create Recipiant </h1>
+<form method = 'post'>
+    {% csrf_token%}
+    {{forms.as_p}}
+    <button type="submit">Save</button>
+</form>
+<a href = "{%url 'recipiant_list'%}"> Back to List </a> 

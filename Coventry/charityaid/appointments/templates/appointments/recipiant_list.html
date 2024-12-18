@@ -1,0 +1,11 @@
+<h1>Recipient List</h1>
+    <ul> {% for Recipiant in recipiants %} 
+        <li> {{ Recipiant.fname }} {{ Recipiant.lname}} - {{ Recipiant.telephone }}
+        <a href="{% url 'recipiant_detail' Recipiant.id%}">View</a>
+        <a href="{% url 'recipiant_edit' Recipiant.id %}">Edit</a>  
+        <a href="{% url 'recipiant_delete' Recipiant.id%}">Delete</a>
+    </li>
+    {% empty %}
+        <li>No recipients found.</li>
+    {% endfor %}
+</ul>

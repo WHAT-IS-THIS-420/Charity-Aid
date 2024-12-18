@@ -1,0 +1,7 @@
+<h1>Delete Recipiant Confirmation</h1>
+<p>Are you sure you want to delete {{ recipiant.fname }} {{ recipiant.lname}}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+<br><br><a href="{% url 'recipiant_list' %}">Cancel</a>
